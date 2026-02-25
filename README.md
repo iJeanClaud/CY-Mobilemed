@@ -10,7 +10,7 @@ Suíte Cypress para validar a aplicação de gestão de pacientes e exames (back
 - **Frontend alvo:** Angular 19 em `http://localhost:4200`
 - **Autenticação:** JWT (usuário seed `adm@gmail.com`, senha `muka123`)
 
-> Detalhes completos de setup estão no repositório base: https://github.com/mobilemed-dev/desafio-tecnico-QA-III
+> Detalhes completos de setup do ambiente estão no repositório base: https://github.com/mobilemed-dev/desafio-tecnico-QA-III
 
 ## Estrutura
 - `cypress/e2e`: testes de interface (login, pacientes, exames).
@@ -34,10 +34,12 @@ Suíte Cypress para validar a aplicação de gestão de pacientes e exames (back
 2. Node.js 18+ e npm instalados.
 
 ## Configuração
-- Credenciais padrão vêm de `cypress/fixtures/login.json` alinhadas com as seeds do backend.
+- Clone este repositório e instale as dependências com `npm install`.
+- Credenciais padrão vêm de `cypress/fixtures/login.json` e devem refletir as seeds do backend (`adm@gmail.com` / `muka123`).
+- Para os testes de UI, garanta o frontend rodando em `http://localhost:4200`; para API, o backend deve estar ativo.
 
 ## Como executar
-**UI (E2E)**
+**UI (E2E) / API**
 ```bash
 npx cypress open   # runner interativo
 npx cypress run    # headless
@@ -48,3 +50,7 @@ npx cypress run    # headless
 - Autenticação via API para E2E (`cy.loginApi`) reduzindo setup e tempo de execução.
 - Factories e fixtures para dados dinâmicos e CPFs válidos.
 - Cobertura de regras de negócio críticas: idempotencyKey em exames, documento único de paciente, paginação consistente.
+
+## Testes exploratórios e evidências
+Testes exploratórios manuais foram executados; evidências e modelos de registro estão disponíveis para consulta:
+https://drive.google.com/file/d/1cuLLbQLjduj9JNSfLSIC8ZzTjFyLjJWN/view?usp=sharing
