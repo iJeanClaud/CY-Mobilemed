@@ -1,0 +1,12 @@
+{
+    "ui":{
+            "pacientesPageMessages": {
+            "pacienteCadastradoSucesso": "Paciente registrado com sucesso",
+            "pacienteDuplicadoBase": " Ops! Parece que houve um erro! Tente novamente. Se o problema persistir, entre em contato conosco. duplicate key value violates unique constraint \"ux_patient_document\"",
+            "avisoPreenchimentoObrigatorio": "Preencha todos os campos obrigatórios",
+            "exameCriadoComSucesso": "Exame criado com sucesso",
+            "pacienteAtualizadoComSucesso": "Paciente atualizado com sucesso"
+        }
+    },
+    "api":{}
+}

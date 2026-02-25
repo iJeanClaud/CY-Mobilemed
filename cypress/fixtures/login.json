@@ -1,0 +1,21 @@
+{
+    "ui": {
+            "credential": {
+            "email": "adm@gmail.com",
+            "password": "muka123"
+        },
+            "LoginPageErrorMessages":{
+            "invalidCredential": "Senha inválida",
+            "invalidCredencialLabel": "Usuário ou senha inválidos, verifique suas credenciais.",
+            "emptyFieldsLabel": "Preencha todos os campos obrigatórios."
+        }
+    },
+    "api": {
+        "credentials": {
+            "validEmail": "adm@gmail.com",
+            "validPassword": "muka123",
+            "invalidEmail": "invalid@gmail.com",
+            "invalidPassword": "invalidpassword"
+        }
+    }
+}

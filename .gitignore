@@ -1,0 +1,12 @@
+# Dependências e artefatos
+node_modules/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# SO / editor
+.DS_Store
+Thumbs.db
+*.log
