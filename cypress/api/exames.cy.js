@@ -27,6 +27,8 @@ describe('Exames API', () => {
     // Cenário: criação de exame vinculando paciente recém-criado deve responder 201
     it('Deve cadastrar exame com sucesso', () => {
 
+        const key = `exam-key-${Date.now()}`;
+
         // Pré-condição: cria paciente para relacionar o exame
         cy.request({
             method: 'POST',
@@ -50,7 +52,7 @@ describe('Exames API', () => {
                 body: {
                     patientId: pacienteId,
                     modality: "CR",
-                    idempotencyKey: "exam-key-1"
+                    idempotencyKey: key
                 },
                 failOnStatusCode: false
             }).then((examResponse) => {
@@ -70,7 +72,6 @@ describe('Exames API', () => {
             body: {
                 patientId: "fake-id",
                 modality: "CR",
-                examDate: new Date().toISOString(),
                 idempotencyKey: "exam-key-2"
             },
             failOnStatusCode: false
@@ -89,7 +90,6 @@ describe('Exames API', () => {
             body: {
                 patientId: "uuid-invalido",
                 modality: "CR",
-                examDate: new Date().toISOString(),
                 idempotencyKey: "exam-key-3"
             },
             failOnStatusCode: false
